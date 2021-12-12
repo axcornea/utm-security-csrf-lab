@@ -1,0 +1,12 @@
+<!doctype html>
+<html
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="fragments/layout/default"
+        th:with="pageTitle='Successfull payment'">
+  <body>
+    <div layout:fragment="heading">Thank you for using our service!</div>
+    <div layout:fragment="content">
+        You have successfully sent <span th:text="${amount}"></span> money units to <span th:text="${recipient}"></span>.
+    </div>
+  </body>
+</html>

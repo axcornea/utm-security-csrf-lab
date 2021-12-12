@@ -1,0 +1,15 @@
+server:
+  port: 8443
+
+  ssl:
+    key-store-type: "PKCS12"
+    key-store: "classpath:keystore/tomcat.p12"
+    key-store-password: "tomcat"
+    key-alias: "tomcat"
+
+spring.mvc:
+  static-path-pattern: "/static/**"
+  resources.static-locations: "classpath:/static"
+
+csrf-protection:
+  enabled: true

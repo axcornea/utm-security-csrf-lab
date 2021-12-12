@@ -1,0 +1,15 @@
+<!doctype html>
+<html
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="fragments/layout/default"
+        th:with="pageTitle='Home page'">
+    <body>
+        <div layout:fragment="heading">Security lab #9 - CSRF Security</div>
+        <div layout:fragment="content">
+            <div class="links">
+                <a class="links__link" href="payment">Send a payment</a>
+                <a class="links__link" href="audit">View application audit log</a>
+            </div>
+        </div>
+    </body>
+</html>

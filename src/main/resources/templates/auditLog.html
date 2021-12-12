@@ -1,0 +1,23 @@
+<!doctype html>
+<html
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="fragments/layout/default"
+        th:with="pageTitle='Audit log'">
+  <body>
+    <div layout:fragment="heading">Audit log records</div>
+    <div layout:fragment="content">
+      <table class="audit-table">
+        <tr class="audit-table__heading-row">
+          <th>Action</th>
+          <th>Subject</th>
+          <th>Timestamp</th>
+        </tr>
+        <tr th:each="item : ${auditLog}">
+          <td th:text="${item.action}"></td>
+          <td th:text="${item.subject}"></td>
+          <td th:text="${#temporals.format(item.timestamp, 'dd/MM/yyyy HH:mm')}"></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

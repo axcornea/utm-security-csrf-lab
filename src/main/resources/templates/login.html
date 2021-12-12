@@ -1,0 +1,28 @@
+<!doctype html>
+<html
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="fragments/layout/default"
+        th:with="pageTitle='Log in'">
+  <body>
+    <div layout:fragment="heading">Log in</div>
+    <div layout:fragment="content">
+      <form class="form" th:action="@{/auth/login}" method="post">
+        <div class="form__error-message" th:if="${invalidCredentials}">
+          Invalid credentials
+        </div>
+
+        <div class="form__field">
+          <label class="form__label" for="username">Username</label>
+          <input class="form__text-input" type="text" name="username" id="username" placeholder="Username" required />
+        </div>
+
+        <div class="form__field">
+          <label class="form__label" for="password">Password</label>
+          <input class="form__text-input" type="password" name="password" id="password" placeholder="Password" required />
+        </div>
+
+        <input class="form__submit-button" type="submit" value="Log in" />
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+<footer class="page__footer" th:fragment="footer">
+    <a th:if="${#httpServletRequest.requestURI != '/' && !#httpServletRequest.requestURI.startsWith('/auth')}" href="/">Back home</a>
+</footer>

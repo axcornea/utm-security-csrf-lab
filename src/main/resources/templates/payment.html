@@ -1,0 +1,24 @@
+<!doctype html>
+<html
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="fragments/layout/default"
+        th:with="pageTitle='Send payment'">
+  <body>
+    <div layout:fragment="heading">Send payment</div>
+    <div layout:fragment="content">
+      <form class="form" th:action="@{/payment}" method="post">
+        <div class="form__field">
+          <label class="form__label" for="to">Recipient</label>
+          <input class="form__text-input" type="text" name="to" id="to" placeholder="Recipient" required />
+        </div>
+
+        <div class="form__field">
+          <label class="form__label" for="amount">Amount</label>
+          <input class="form__text-input" type="number" value="100" name="amount" id="amount" required />
+        </div>
+
+        <input class="form__submit-button" type="submit" value="Send" />
+      </form>
+    </div>
+  </body>
+</html>

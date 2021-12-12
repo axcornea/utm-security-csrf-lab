@@ -10,7 +10,7 @@ and preventing this operation from CSRF attacks.
 To run this application locally use need to have the following tools installed on your workstation:
 * JDK 11+ (OpenJDK used during development)
 
-## Configuration
+### Configuration
 
 CSRF protection can be configured inside the `src/main/resources/application.yml` file.
 

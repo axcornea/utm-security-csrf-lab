@@ -5,7 +5,7 @@ and preventing this operation from CSRF attacks.
 
 ## Running locally
 
-## Prerequisites
+### Prerequisites
 
 To run this application locally use need to have the following tools installed on your workstation:
 * JDK 11+ (OpenJDK used during development)
